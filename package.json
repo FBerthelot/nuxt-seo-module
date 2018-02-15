@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-seo-module",
+  "version": "1.0.0-alpha.1",
+  "description": " Nuxt Module that generate sitemap, robot.txt and many things like that",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "npm run lint && mocha -R nyan --recursive src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FBerthelot/nuxt-seo-module.git"
+  },
+  "keywords": [
+    "nuxt",
+    "vuejs",
+    "seo"
+  ],
+  "author": "FBerthelot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FBerthelot/nuxt-seo-module/issues"
+  },
+  "homepage": "https://github.com/FBerthelot/nuxt-seo-module#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "eslint-config-xo-space": "^0.17.0",
+    "mocha": "^5.0.0",
+    "proxyquire": "^1.8.0"
+  },
+  "dependencies": {
+    "is-https": "^1.0.0",
+    "nuxt-robots-module": "1.1.0",
+    "pify": "^3.0.0",
+    "sitemap": "^1.13.0"
+  }
+}
