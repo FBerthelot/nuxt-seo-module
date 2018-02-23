@@ -21,7 +21,7 @@ const nuxtModule = proxyquire('./index', {
   }
 });
 
-describe('robots module', () => {
+xdescribe('robots module', () => {
   let options;
   let nuxt;
   let middlewareOpts;
