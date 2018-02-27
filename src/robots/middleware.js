@@ -8,8 +8,6 @@ exports.registerMiddlewares = (options, nuxtInstance) => {
     handler(req, res) {
       const renderedRobots = create(options, req);
 
-      console.log(renderedRobots);
-
       res.setHeader('Content-Type', 'text/plain');
       res.end(renderedRobots);
     }

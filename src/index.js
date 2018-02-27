@@ -10,7 +10,7 @@ module.exports = function (moduleOptions) {
     ...moduleOptions,
     sitemap: [
       ...(
-        moduleOptions.sitemap === true ?
+        (moduleOptions || this.options).sitemap === true ?
           [{
             path: 'sitemap.xml',
             hostname: null,
@@ -19,7 +19,7 @@ module.exports = function (moduleOptions) {
             routes: [],
             cacheTime: 1000 * 60 * 15
           }] :
-          moduleOptions.sitemap.map(sitemap => {
+          (moduleOptions || this.options).sitemap.map(sitemap => {
             return {
               path: 'sitemap.xml',
               hostname: null,
@@ -36,7 +36,7 @@ module.exports = function (moduleOptions) {
       UserAgent: '*',
       Disallow: '',
       ...this.options.robots,
-      ...moduleOptions.robots
+      ...(moduleOptions || {}).robots
     }
   };
 

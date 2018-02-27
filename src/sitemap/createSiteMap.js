@@ -9,14 +9,21 @@ exports.createSitemap = function (options, routes, req) {
   const sitemapConfig = {
     hostname: options.baseUrl || (req && `${isHTTPS(req) ? 'https' : 'http'}://${req.headers.host}`) || `http://${hostname()}`,
     urls: routes
-      .filter((elem, index, arr) => arr.indexOf(elem) === index)
       .map(route => {
+        if (typeof route === 'string') {
+          return {url: route};
+        }
         return {
           ...route,
           url: route.chunkName ? route.path : route.url
         };
       })
-      .filter(route => !route.url.match(/\/:.*/)),
+      .filter((elem, index, arr) => {
+        return arr.findIndex(route => elem.url === route.url) === index;
+      })
+      .filter(route => {
+        return !route.url.match(/\/:.*/);
+      }),
     cacheTime: options.cacheTime || 0
   };
 
