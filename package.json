@@ -1,6 +1,6 @@
 {
   "name": "nuxt-seo-module",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": " Nuxt Module that generate sitemap, robot.txt and many things like that",
   "main": "src/index.js",
   "scripts": {
