@@ -83,7 +83,7 @@ A complete example of sitemap options:
 modules: [
   /* ... */
   ['nuxt-seo-module', {
-    sitmap: [{
+    sitemap: [{
       path: 'sitemap.xml',
       hostname: null,
       generate: true,
