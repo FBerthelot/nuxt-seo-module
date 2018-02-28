@@ -7,7 +7,7 @@ const {promisify} = require('util');
 const unlink = promisify(fs.unlink);
 const writeFile = promisify(fs.writeFile);
 
-const {createSitemap} = require('./createSitemap');
+const {createSitemap} = require('./createSiteMap');
 
 exports.writeFiles = (options, nuxtInstance) => {
   return Promise.all(

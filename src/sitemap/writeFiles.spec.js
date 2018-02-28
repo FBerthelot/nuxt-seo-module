@@ -20,7 +20,7 @@ const {writeFiles} = proxyquire('./writeFiles', {
       cb(unlinkErr);
     }
   },
-  './createSitemap': {
+  './createSiteMap': {
     createSitemap(options, routes) {
       expect(typeof options).to.equal('object');
       expect(routes instanceof Array).to.equal(true);
